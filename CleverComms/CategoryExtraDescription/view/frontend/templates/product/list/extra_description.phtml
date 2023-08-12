@@ -1,0 +1,11 @@
+<?php if ($_extraDescription = $block->getCurrentCategory()->getExtraDescription()): ?>
+	<style>
+		.category-extra-description {
+			margin: 50px 0;
+		}
+	</style>
+	
+	<div class="category-extra-description">
+		<?= /* @escapeNotVerified */ $this->helper('Magento\Catalog\Helper\Output')->categoryAttribute($block->getCurrentCategory(), $_extraDescription, 'extra_description') ?>
+	</div>
+<?php endif; ?>
